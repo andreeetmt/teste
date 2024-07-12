@@ -89,3 +89,94 @@ bool CasaOcupada(int posicao) {
 Verifica se uma posiçao no tabuleiro está ocupada.
 
 
+### Funções de Verificação de Vitória
+```cpp
+
+
+bool vitoriaX() {
+    if ((tabuleiro[0] == tabuleiro[1] && tabuleiro[1] == tabuleiro[2] && tabuleiro[0] == "X") ||
+        (tabuleiro[3] == tabuleiro[4] && tabuleiro[4] == tabuleiro[5] && tabuleiro[3] == "X") ||
+        (tabuleiro[6] == tabuleiro[7] && tabuleiro[7] == tabuleiro[8] && tabuleiro[6] == "X")) {
+        return true;
+    }
+    if ((tabuleiro[0] == tabuleiro[3] && tabuleiro[3] == tabuleiro[6] && tabuleiro[0] == "X") ||
+        (tabuleiro[1] == tabuleiro[4] && tabuleiro[4] == tabuleiro[7] && tabuleiro[1] == "X") ||
+        (tabuleiro[2] == tabuleiro[5] && tabuleiro[5] == tabuleiro[8] && tabuleiro[2] == "X")) {
+        return true;
+    }
+    if ((tabuleiro[0] == tabuleiro[4] && tabuleiro[4] == tabuleiro[8] && tabuleiro[0] == "X") ||
+        (tabuleiro[2] == tabuleiro[4] && tabuleiro[4] == tabuleiro[6] && tabuleiro[2] == "X")) {
+        return true;
+    }
+    return false;
+}
+
+bool vitoriaO() {
+    if ((tabuleiro[0] == tabuleiro[1] && tabuleiro[1] == tabuleiro[2] && tabuleiro[0] == "O") ||
+        (tabuleiro[3] == tabuleiro[4] && tabuleiro[4] == tabuleiro[5] && tabuleiro[3] == "O") ||
+        (tabuleiro[6] == tabuleiro[7] && tabuleiro[7] == tabuleiro[8] && tabuleiro[6] == "O")) {
+        return true;
+    }
+    if ((tabuleiro[0] == tabuleiro[3] && tabuleiro[3] == tabuleiro[6] && tabuleiro[0] == "O") ||
+        (tabuleiro[1] == tabuleiro[4] && tabuleiro[4] == tabuleiro[7] && tabuleiro[1] == "O") ||
+        (tabuleiro[2] == tabuleiro[5] && tabuleiro[5] == tabuleiro[8] && tabuleiro[2] == "O")) {
+        return true;
+    }
+    if ((tabuleiro[0] == tabuleiro[4] && tabuleiro[4] == tabuleiro[8] && tabuleiro[0] == "O") ||
+        (tabuleiro[2] == tabuleiro[4] && tabuleiro[4] == tabuleiro[6] && tabuleiro[2] == "O")) {
+        return true;
+    }
+    return false;
+}
+```
+Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
+
+### Função Principal
+```cpp
+int main() {
+    int resposta, XouO, Continuar;
+
+    LimparTela();
+
+    // Menu Principal com as várias opções
+    cout << "    ___                            _          _   _        _  _             " << endl;
+    cout << "   |_  |                          | |        | | | |      | || |            " << endl;
+    cout << "     | |  ___    __ _   ___     __| |  __ _  | | | |  ___ | || |__    __ _  " << endl;
+    cout << "     | | / _ \\  / _` | / _ \\   / _` | / _` | | | | | / _ \\| || '_ \\  / _` | " << endl;
+    cout << " /\\__/ /| (_) || (_| || (_) | | (_| || (_| | \\ \\_/ /|  __/| || | | || (_| | " << endl;
+    cout << " \\____/  \\___/  \\__, | \\___/   \\__,_| \\__,_|  \\___/  \\___||_||_| |_| \\__,_| " << endl;
+    cout << "                 __/ |                                                      " << endl;
+    cout << "                |___/                                                       " << endl;
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "" << endl;
+    cout << "                      Escolha o modo de jogo" << endl;
+    cout << "" << endl;
+    cout << "                          1 Jogador (1)" << endl;
+    cout << "                         2 Jogadores (2)" << endl;
+    cout << "                       Sair do programa (0)" << endl;
+    cout << "" << endl;
+
+    cin >> resposta;
+
+    while (resposta != 0) {
+        LimparTela();
+
+        if (resposta == 1) { // Modo de jogo contra a máquina
+            bool jogo = true;
+            TabuleiroNovo();
+
+            while (jogo) {
+                LimparTela();
+                Tabuleiro();
+
+                if (jogadores) { // Jogada do jogador 1
+                    cout << "Jogador 1(X), faca sua jogada: " << endl;
+                    cin >> XouO;
+                    while (CasaO
+```
+
+Funçao principal do codigo, apresentando o menu  suas opções de jogo.
+
+
+
