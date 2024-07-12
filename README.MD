@@ -1,9 +1,9 @@
-<h1 align="center"> Jogo da Idosa👵🎮 </h1>
+<h1 align="center">Jogo da Idosa👵🎮</h1>
 
 <p align="center">
-<img src="![giphy](https://github.com/user-attachments/assets/443417ec-616a-4fcd-8ab9-f4f5bb800f60)
-
-</p>
+  <img src="![giphy](https://github.com/user-attachments/assets/443417ec-616a-4fcd-8ab9-f4f5bb800f60)
+" alt="Descrição do GIF">
+</p
 
 ## Introdução
 Este é um código feito na linguagem C++ para representar um clássico jogo da velha, apelidado carinhosamente de Jogo da Idosa pelos criadores. O jogo pode ser jogado por 2 jogadores, no clássico estilo PVP (jogador contra jogador). Também pode ser jogado no modo PVE (jogador contra o computador). O código está organizado de forma a ser claro e fácil de entender, com funções separadas para cada parte do jogo.
