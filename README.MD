@@ -116,10 +116,6 @@ Verifica se uma posiçao no tabuleiro está ocupada.
 
 
 
-
-
-
-
 ```
 Verifica se deu velha, ou seja, não houve vencedor.
 
