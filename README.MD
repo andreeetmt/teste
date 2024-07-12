@@ -27,7 +27,7 @@ Função LimparTela
 
 cpp
 
-void LimparTela() {
+##  void LimparTela() {
 #ifdef _WIN32
     system("cls");  // Limpa a tela no Windows
 #else
