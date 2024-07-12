@@ -28,5 +28,6 @@ void LimparTela() {
     system("clear");  
 #endif
 }
+// Função para limpar a tela em diferentes sistemas operacionais.
 
-##
+
