@@ -20,3 +20,15 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 - #include <random> - Biblioteca para usar o random
 -  #include <unistd.h> - Biblioteca para usar a função sleep()
 
+# Função LimparTela
+
+void LimparTela() {
+#ifdef _WIN32
+    system("cls");  
+#else
+    system("clear");  
+#endif
+}
+
+Funçao para limpar a tela em diferentes sistemas operacionais.
+
