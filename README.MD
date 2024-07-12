@@ -80,3 +80,12 @@ void Tabuleiro() {
 
 Exibe o tabuleiro atual do jogo, atualizando após cada rodada.
 
+### Função Casa Ocupada
+```cpp
+bool CasaOcupada(int posicao) {
+    return tabuleiro[posicao - 1] != " ";
+}
+```
+Verifica se uma posiçao no tabuleiro está ocupada.
+
+
