@@ -21,7 +21,8 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 -  #include <unistd.h> - Biblioteca para usar a função sleep()
 
 # Função LimparTela
-
+### Inclusão de Bibliotecas
+```cpp
 void LimparTela() {
 #ifdef _WIN32
     system("cls");  
