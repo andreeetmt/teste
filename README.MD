@@ -49,6 +49,34 @@ bool jogadores = true, velha;
 string Jogador1 = "X"; 
 string Jogador2 = "O"; 
 int contadorX1 = 0, contadorO1 = 0, contadorX2 = 0, contadorO2 = 0; 
+
+```
+Declaração de variáveis globais usadas no jogo, incluindo o tabuleiro, status dos jogadores e contadores de vitórias.
+
+###  Tabuleiro
+```cpp
+
+void TabuleiroNovo() {
+    tabuleiro.clear();
+    tabuleiro.resize(9, " ");
+}
+```
+Inicia um tabuleiro clássico de jogo da velha.
+
+
+###  Tabuleiro Por Jogada
+```cpp
+
+void Tabuleiro() {
+    cout << "Tabuleiro:\n";
+    cout << " " << tabuleiro[0] << " | " << tabuleiro[1] << " | " << tabuleiro[2] << "           1 | 2 | 3 \n";
+    cout << "---+---+---          ---+---+---\n";
+    cout << " " << tabuleiro[3] << " | " << tabuleiro[4] << " | " << tabuleiro[5] << "           4 | 5 | 6 \n";
+    cout << "---+---+---          ---+---+---\n";
+    cout << " " << tabuleiro[6] << " | " << tabuleiro[7] << " | " << tabuleiro[8] << "           7 | 8 | 9 \n";
+}
+
 ```
 
+Exibe o tabuleiro atual do jogo, atualizando após cada rodada.
 
