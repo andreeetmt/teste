@@ -1,4 +1,4 @@
-# Jogo da Velha
+# Jogo da Idosa👵
 
 ## Introdução
 Este é um código feito na linguagem c++ para representar um clássico jogo da velha, apelidado carinhosamente de Jogo da Idosa pelos criadores. O jogo pode
