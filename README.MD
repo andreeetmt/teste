@@ -12,14 +12,11 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 - Guilherme Toledo Osanai Lima (241008498)
 - Gustavo Neri Alves Almeida (241008569)
 
-## ### Inclusão de Bibliotecas
+##  Inclusão de Bibliotecas
 ```cpp
-#include <iostream> // Biblioteca base do C++
-#include <vector> // Biblioteca para facilitar a manipulação de vetores
-#include <random> // Biblioteca para usar o random
-#include <unistd.h> // Biblioteca para usar a função sleep()
+#include <iostream> - Biblioteca base do C++
+#include <vector> - Biblioteca para facilitar a manipulação de vetores
+#include <random> - Biblioteca para usar o random
+#include <unistd.h> - Biblioteca para usar a função sleep()
 
-1. **Clone o repositório:**
-   ```sh
-   git clone <url-do-repositorio>
-   cd <nome-do-repositorio>
+
