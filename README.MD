@@ -180,6 +180,6 @@ Funçao principal do codigo, apresentando o menu  suas opções de jogo.
 
 ## 📍Conclusão
 
-Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. É uma ótima maneira de aprender sobre vetores, funções, loops, e manipulação de entradas/saídas em C++. Divirta-se jogando e explorando o código!
+Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. Foi feito como projeto computacional para a matéria Computaçao para Engenharia. O jogo apresenta os conceitos de vetores, funções, loops, e manipulação de entradas/saídas em C++.
 
 
