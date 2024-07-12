@@ -2,7 +2,7 @@
 
 <p align="center">
 <img src="![giphy](https://github.com/user-attachments/assets/443417ec-616a-4fcd-8ab9-f4f5bb800f60)
-" alt="Descrição do GIF">
+
 </p>
 
 ## Introdução
