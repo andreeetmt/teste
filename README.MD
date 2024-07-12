@@ -28,7 +28,7 @@ void LimparTela() {
     system("clear");  
 #endif
 }
-```cpp
+```
 
 
 
