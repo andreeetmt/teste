@@ -19,4 +19,6 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 #include <random> - Biblioteca para usar o random
 #include <unistd.h> - Biblioteca para usar a função sleep()
 
+Essas bibliotecas são incluídas para fornecer funcionalidades essenciais como entrada/saída de dados, manipulação de vetores , geração de números aleatórios e controle de tempo de execução.
+
 
