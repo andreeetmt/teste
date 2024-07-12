@@ -19,6 +19,15 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 #include <random> - Biblioteca para usar o random
 #include <unistd.h> - Biblioteca para usar a função sleep()
 
-Essas bibliotecas são incluídas para fornecer funcionalidades essenciais como entrada/saída de dados, manipulação de vetores , geração de números aleatórios e controle de tempo de execução.
+Essas bibliotecas são incluídas para fornecer funcionalidades essenciais como entrada/saída de dados, manipulação de vetores, 
+geração de números aleatórios e controle de tempo de execução.
 
 
+## Funçao Limpar tela
+##  void LimparTela() {
+#ifdef _WIN32
+    system("cls");  // Limpa a tela no Windows
+#else
+    system("clear");  // Limpa a tela em sistemas Unix/Linux
+#endif
+}
