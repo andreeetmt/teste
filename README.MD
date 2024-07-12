@@ -28,3 +28,9 @@ void LimparTela() {
     system("clear");  
 #endif
 }
+
+
+
+## 
+
+### Limpar Tela
