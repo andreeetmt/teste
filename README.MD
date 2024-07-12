@@ -23,9 +23,10 @@ Essas bibliotecas são incluídas para fornecer funcionalidades essenciais como 
 geração de números aleatórios e controle de tempo de execução.
 
 
-Função LimparTela
 
-cpp
+##  Função LimparTela
+```cpp
+
 
 ##  void LimparTela() {
 #ifdef _WIN32
@@ -36,4 +37,3 @@ cpp
 }
 
 Função para limpar a tela do console, adaptada para sistemas Windows e Unix/Linux.
-
