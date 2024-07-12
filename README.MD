@@ -29,7 +29,7 @@ void LimparTela() {
 #endif
 }
 ```
-
+Função para limpar a tela em diferentes sistemas operacionais.
 ### Gerador de Números
 ```cpp
 
@@ -40,5 +40,15 @@ uniform_int_distribution<> dist(0, 8);
 ```
 Funçao para o computador gerar numeros e assim decidir suas jogadas.
 
+###  Declaraçao de varivaveis
+```cpp
+
+vector<string> tabuleiro(9, " "); 
+string situacao;
+bool jogadores = true, velha;
+string Jogador1 = "X"; 
+string Jogador2 = "O"; 
+int contadorX1 = 0, contadorO1 = 0, contadorX2 = 0, contadorO2 = 0; 
+```
 
 
