@@ -37,8 +37,8 @@ random_device rd;
 mt19937 gen(rd()); 
 uniform_int_distribution<> dist(0, 8); 
 
-Funçao para o computador gerar numeros e assim decidir suas jogadas.
 ```
+Funçao para o computador gerar numeros e assim decidir suas jogadas.
 
 
 
