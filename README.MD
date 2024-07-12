@@ -30,4 +30,6 @@ void LimparTela() {
 }
 // Função para limpar a tela em diferentes sistemas operacionais.
 
+### A
+
 
