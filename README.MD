@@ -376,3 +376,7 @@ Função principal do código, apresentando o menu e suas opções de jogo e o c
 ## 📍Conclusão
 
 Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. Foi feito como projeto computacional para a matéria Computação para Engenharia. O jogo apresenta os conceitos de vetores, funções, loops e manipulação de entradas/saídas em C++.
+
+## Links 
+
+[Slides do projeto](https://unbbr-my.sharepoint.com/:p:/g/personal/241008569_aluno_unb_br/EdaIsIvQT8tBm3w-UAWVJZoBt0MDB064p6-lMBjtndL5gA?e=tA2hkO)
