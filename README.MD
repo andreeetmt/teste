@@ -12,17 +12,6 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 - Guilherme Toledo Osanai Lima (241008498)
 - Gustavo Neri Alves Almeida (241008569)
 
-##  Inclusão de Bibliotecas
-```cpp
-#include <iostream> - Biblioteca base do C++
-#include <vector> - Biblioteca para facilitar a manipulação de vetores
-#include <random> - Biblioteca para usar o random
-#include <unistd.h> - Biblioteca para usar a função sleep()
-
-Essas bibliotecas são incluídas para fornecer funcionalidades essenciais como entrada/saída de dados, manipulação de vetores, 
-geração de números aleatórios e controle de tempo de execução.
-
-
 
 # :hammer: Inclusão de Bibliotecas
 
