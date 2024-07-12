@@ -28,9 +28,7 @@ void LimparTela() {
     system("clear");  
 #endif
 }
+```cpp
 
 
 
-## 
-
-### Limpar Tela
