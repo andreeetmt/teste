@@ -88,6 +88,43 @@ bool CasaOcupada(int posicao) {
 ```
 Verifica se uma posiçao no tabuleiro está ocupada.
 
+### Verificação de empate
+
+
+
+
+
+```cpp
+
+
+    bool velha = true; // Checar se "deu velha"
+                    for (const string& casa : tabuleiro) {
+                        if (casa == " ") {
+                            velha = false;
+                        break;
+                        }
+                    }
+
+                if (velha) { 
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "Deu velha!" << endl;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX2 << "  Jogador 2(O): " << contadorO2 << endl;
+                    jogo = false;
+                }
+            }
+
+
+
+
+
+
+
+```
+Verifica se deu velha, ou seja, não houve vencedor.
+
+
+
 
 ### Funções de Verificação de Vitória
 ```cpp
@@ -133,12 +170,13 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
 
 ### Função Principal
 ```cpp
-int main() {
+
     int resposta, XouO, Continuar;
 
-    LimparTela();
+    LimparTela(int);
 
     // Menu Principal com as várias opções
+
     cout << "    ___                            _          _   _        _  _             " << endl;
     cout << "   |_  |                          | |        | | | |      | || |            " << endl;
     cout << "     | |  ___    __ _   ___     __| |  __ _  | | | |  ___ | || |__    __ _  " << endl;
@@ -173,13 +211,170 @@ int main() {
                 if (jogadores) { // Jogada do jogador 1
                     cout << "Jogador 1(X), faca sua jogada: " << endl;
                     cin >> XouO;
-                    while (CasaO
+                    while (CasaOcupada(XouO)) { // Repetição da entrada caso esteja ocupada
+                    cout << "Casa ocupada! Escolha outra casa: ";
+                    cin >> XouO;
+                    }
+                } else { // Jogada da Máquina
+                    cout << "Jogador 2(O), faca sua jogada: " << endl;
+                    sleep(2);
+                    do{
+                    XouO = dist(gen); // Gera um índice de 0 a 8 (correspondente ao vetor)
+                    } while (CasaOcupada(XouO)); // Converte índice para posição de 1 a 9
+                }
+
+
+                if (jogadores) { // Revezamento dos jogadores
+                    tabuleiro[XouO - 1] = Jogador1;
+                    jogadores = false;
+                } else {
+                    tabuleiro[XouO - 1] = Jogador2;
+                    jogadores = true;
+                }
+
+                if (vitoriaX()) { // Checar vitória do Jogador 1
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "\n\n\nJOGADOR 1(X) GANHOU!!! Parebens :D\n\n\n";
+                    contadorX1++;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX1 << "  Jogador 2(O): " << contadorO1 << endl;
+                    jogo = false;
+                } else if (vitoriaO()) { // Checar vitória da Máquina
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "\n\n\nJOGADOR 2(O) GANHOU!!! Parebens :D\n\n\n";
+                    contadorO1++;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX1 << "  Jogador 2(O): " << contadorO1 << endl;
+                    jogo = false;
+                }
+
+                    bool velha = true; // Checar se "deu velha"
+                    for (const string& casa : tabuleiro) {
+                        if (casa == " ") {
+                            velha = false;
+                        break;
+                        }
+                    }
+
+                if (velha) { 
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "Deu velha!" << endl;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX2 << "  Jogador 2(O): " << contadorO2 << endl;
+                    jogo = false;
+                }
+            }
+
+            // Opções de voltar para o menu, jogar novamente ou encerrar o programa
+            cout << "\n\nJogar novamente? (1)" << endl;
+            cout << "Voltar para o Menu (2) " << endl;
+            cout << "Encerrar programa (0)" << endl;
+            cin >> Continuar;
+
+            if (Continuar == 0) {
+                LimparTela();
+                cout << "ENCERRANDO PROGRAMA!" << endl;
+                return 0;
+            } else if (Continuar == 1) {
+                continue;
+            } else if (Continuar == 2) {
+                return main();
+            }
+
+        } else if (resposta == 2) { // Modo de jogo entre dois jogadores
+            bool jogo = true;
+            TabuleiroNovo();
+
+            while (jogo) {
+                LimparTela();
+                Tabuleiro();
+
+                if (jogadores) { // Alterna entre os jogadores
+                    cout << "Jogador 1(X), faca sua jogada: " << endl;
+                } else {
+                    cout << "Jogador 2(O), faca sua jogada: " << endl;
+                }
+
+                cin >> XouO;
+
+                while (CasaOcupada(XouO)) { // Função de checagem de casa ocupada
+                    cout << "Casa ocupada! Escolha outra casa: ";
+                    cin >> XouO;
+                }
+
+                if (jogadores) { // Jogada do Jogador 1
+                    tabuleiro[XouO - 1] = Jogador1;
+                    jogadores = false;
+                } else { // Jogada do Jogador 2
+                    tabuleiro[XouO - 1] = Jogador2;
+                    jogadores = true;
+                }
+
+                if (vitoriaX()) { // Checagem de vitória do Jogador 1
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "\n\n\nJOGADOR 1(X) GANHOU!!! Parebens :D\n\n\n";
+                    contadorX2++;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX2 << "  Jogador 2(O): " << contadorO2 << endl;
+                    jogo = false;
+                    
+                } else if (vitoriaO()) { // Checagem de vitória do Jogador 2
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "\n\n\nJOGADOR 2(O) GANHOU!!! Parebens :D\n\n\n";
+                    contadorO2++;
+                    cout << "Pontuacao! \nJogador 1(X): " << contadorX2 << "  Jogador 2(O): " << contadorO2 << endl;
+                    jogo = false;
+                }
+
+                    bool velha = true; // Função para checar se "deu velha"
+                    for (const string& casa : tabuleiro) {
+                        if (casa == " ") {
+                            velha = false;
+                            break;
+                        }
+                    }
+
+                if (velha) {
+                    LimparTela();
+                    Tabuleiro();
+                    cout << "Deu velha!" << endl;
+                    cout << "Pontucao! \nJogador 1(X): " << contadorX2 << "  Jogador 2(O): " << contadorO2 << endl;
+                    jogo = false;
+                }
+            }
+            
+            // Opções para voltar ao menu principal, jogar novamente ou encerrar o programa
+
+            cout << "\n\nJogar novamente? (1)" << endl;
+            cout << "Voltar para o Menu (2) " << endl;
+            cout << "Encerrar programa (0)" << endl;
+            cin >> Continuar;
+
+            if (Continuar == 0) {
+                LimparTela();
+                cout << "ENCERRANDO PROGRAMA!" << endl;
+                return 0;
+            } else if (Continuar == 1) {
+                continue;
+            } else if (Continuar == 2) {
+                return main();
+            }
+            } else if (resposta == 0) {
+                cout << "ENCERRANDO PROGRAMA" << endl;
+                break;
+            } else {
+                cout << "Resposta inesperada, Tente novamente :(" << endl;
+            }
+    }
+
+    return 0;
+}
 ```
 
-Funçao principal do codigo, apresentando o menu  suas opções de jogo.
+Função principal do código, apresentando o menu e suas opções de jogo.
 
 ## 📍Conclusão
 
-Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. Foi feito como projeto computacional para a matéria Computaçao para Engenharia. O jogo apresenta os conceitos de vetores, funções, loops, e manipulação de entradas/saídas em C++.
-
+Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. Foi feito como projeto computacional para a matéria Computação para Engenharia. O jogo apresenta os conceitos de vetores, funções, loops e manipulação de entradas/saídas em C++.
 
