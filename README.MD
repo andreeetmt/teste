@@ -1,9 +1,9 @@
-<h1 align="center">Jogo da Idosa👵🎮</h1>
+<h1 align="center"> Jogo da Idosa👵🎮 </h1>
 
 <p align="center">
-  <img src="![giphy](https://github.com/user-attachments/assets/443417ec-616a-4fcd-8ab9-f4f5bb800f60)
-" alt="Descrição do GIF">
-</p
+  <img src="src/giphy.gif" alt="">
+</p>
+
 
 ## Introdução
 Este é um código feito na linguagem C++ para representar um clássico jogo da velha, apelidado carinhosamente de Jogo da Idosa pelos criadores. O jogo pode ser jogado por 2 jogadores, no clássico estilo PVP (jogador contra jogador). Também pode ser jogado no modo PVE (jogador contra o computador). O código está organizado de forma a ser claro e fácil de entender, com funções separadas para cada parte do jogo.
@@ -22,7 +22,7 @@ Este é um código feito na linguagem C++ para representar um clássico jogo da 
 - `#include <random>` - Biblioteca para usar o random
 - `#include <unistd.h>` - Biblioteca para usar a função sleep()
 
-## Funções
+## Funções Importantes 
 
 ### Limpar Tela
 ```cpp
@@ -201,7 +201,7 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
     while (resposta != 0) {
         LimparTela();
 
-        if (resposta == 1) { // Modo de jogo contra a máquina
+        if (resposta == 1) { 
             bool jogo = true;
             TabuleiroNovo();
 
@@ -209,19 +209,19 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                 LimparTela();
                 Tabuleiro();
 
-                if (jogadores) { // Jogada do jogador 1
+                if (jogadores) { 
                     cout << "Jogador 1(X), faca sua jogada: " << endl;
                     cin >> XouO;
-                    while (CasaOcupada(XouO)) { // Repetição da entrada caso esteja ocupada
+                    while (CasaOcupada(XouO)) { 
                     cout << "Casa ocupada! Escolha outra casa: ";
                     cin >> XouO;
                     }
-                } else { // Jogada da Máquina
+                } else { 
                     cout << "Jogador 2(O), faca sua jogada: " << endl;
                     sleep(2);
                     do{
-                    XouO = dist(gen); // Gera um índice de 0 a 8 (correspondente ao vetor)
-                    } while (CasaOcupada(XouO)); // Converte índice para posição de 1 a 9
+                    XouO = dist(gen); 
+                    } while (CasaOcupada(XouO)); 
                 }
 
 
@@ -233,14 +233,14 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                     jogadores = true;
                 }
 
-                if (vitoriaX()) { // Checar vitória do Jogador 1
+                if (vitoriaX()) { 
                     LimparTela();
                     Tabuleiro();
                     cout << "\n\n\nJOGADOR 1(X) GANHOU!!! Parebens :D\n\n\n";
                     contadorX1++;
                     cout << "Pontuacao! \nJogador 1(X): " << contadorX1 << "  Jogador 2(O): " << contadorO1 << endl;
                     jogo = false;
-                } else if (vitoriaO()) { // Checar vitória da Máquina
+                } else if (vitoriaO()) { 
                     LimparTela();
                     Tabuleiro();
                     cout << "\n\n\nJOGADOR 2(O) GANHOU!!! Parebens :D\n\n\n";
@@ -249,7 +249,7 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                     jogo = false;
                 }
 
-                    bool velha = true; // Checar se "deu velha"
+                    bool velha = true; 
                     for (const string& casa : tabuleiro) {
                         if (casa == " ") {
                             velha = false;
@@ -266,7 +266,6 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                 }
             }
 
-            // Opções de voltar para o menu, jogar novamente ou encerrar o programa
             cout << "\n\nJogar novamente? (1)" << endl;
             cout << "Voltar para o Menu (2) " << endl;
             cout << "Encerrar programa (0)" << endl;
@@ -282,7 +281,7 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                 return main();
             }
 
-        } else if (resposta == 2) { // Modo de jogo entre dois jogadores
+        } else if (resposta == 2) { 
             bool jogo = true;
             TabuleiroNovo();
 
@@ -290,7 +289,7 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                 LimparTela();
                 Tabuleiro();
 
-                if (jogadores) { // Alterna entre os jogadores
+                if (jogadores) { 
                     cout << "Jogador 1(X), faca sua jogada: " << endl;
                 } else {
                     cout << "Jogador 2(O), faca sua jogada: " << endl;
@@ -298,12 +297,12 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
 
                 cin >> XouO;
 
-                while (CasaOcupada(XouO)) { // Função de checagem de casa ocupada
+                while (CasaOcupada(XouO)) {
                     cout << "Casa ocupada! Escolha outra casa: ";
                     cin >> XouO;
                 }
 
-                if (jogadores) { // Jogada do Jogador 1
+                if (jogadores) { 
                     tabuleiro[XouO - 1] = Jogador1;
                     jogadores = false;
                 } else { // Jogada do Jogador 2
@@ -345,7 +344,6 @@ Nesta parte, é verificado as condiçoes de vitória padrões do jogo da velha.
                 }
             }
             
-            // Opções para voltar ao menu principal, jogar novamente ou encerrar o programa
 
             cout << "\n\nJogar novamente? (1)" << endl;
             cout << "Voltar para o Menu (2) " << endl;
@@ -378,4 +376,3 @@ Função principal do código, apresentando o menu e suas opções de jogo e o c
 ## 📍Conclusão
 
 Este jogo da velha é uma aplicação simples que demonstra conceitos fundamentais de programação em C++. Foi feito como projeto computacional para a matéria Computação para Engenharia. O jogo apresenta os conceitos de vetores, funções, loops e manipulação de entradas/saídas em C++.
-
