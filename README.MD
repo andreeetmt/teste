@@ -19,7 +19,7 @@ Este é um código feito na linguagem C++ para representar um clássico jogo da 
 
 ## Funções
 
-#Limpar Tela
+### Limpar Tela
 ```cpp
 void LimparTela() {
 #ifdef _WIN32
