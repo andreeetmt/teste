@@ -21,7 +21,7 @@ ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogad
 -  #include <unistd.h> - Biblioteca para usar a função sleep()
 
 # Função LimparTela
-### Inclusão de Bibliotecas
+### Limpar Tela
 ```cpp
 void LimparTela() {
 #ifdef _WIN32
@@ -32,4 +32,9 @@ void LimparTela() {
 }
 
 Funçao para limpar a tela em diferentes sistemas operacionais.
+###
+
+#random_device rd; // Gerador de números aleatórios baseado em hardware, se disponível
+mt19937 gen(rd()); // Mersenne Twister 19937 como o gerador padrão
+uniform_int_distribution<> dist(0, 8); // Números entre 0 e 8 (para um tabuleiro 3x3)
 
