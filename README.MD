@@ -1,7 +1,8 @@
 # Jogo da Velha
 
 ## Introdução
-Este é um jogo da velha (Tic-Tac-Toe) desenvolvido em C++ por um grupo de alunos. O jogo possui modos para um jogador (contra o computador) e dois jogadores (contra outra pessoa). O código é estruturado para ser simples e interativo, utilizando conceitos básicos de C++ como vetores, funções, geração de números aleatórios e manipulação de entradas/saídas.
+Este é um código feito na linguagem c++ para representar um clássico jogo da velha, apelidado carinhosamente de Jogo da Idosa pelos criadores. O jogo pode
+ser jogado por 2 jogadores, no clássico estilo estilo PVP, jogador contra jogador.Também pode ser jogado no modo PVE, jogador contra um computador. O código está organizado de forma a ser claro e fácil de entender, com funções separadas para cada parte do jogo.
 
 ## Membros do Grupo
 - André Luís Furtado Cabral (241024590)
