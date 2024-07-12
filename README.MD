@@ -19,7 +19,7 @@ Este é um código feito na linguagem C++ para representar um clássico jogo da 
 
 ## Funções
 
-### Limpar Tela
+### 
 ```cpp
 void LimparTela() {
 #ifdef _WIN32
@@ -30,6 +30,8 @@ void LimparTela() {
 }
 // Função para limpar a tela em diferentes sistemas operacionais.
 
-### A
+random_device rd; // Gerador de números aleatórios baseado em hardware, se disponível
+mt19937 gen(rd()); // Mersenne Twister 19937 como o gerador padrão
+uniform_int_distribution<> dist(0, 8); // Números entre 0 e 8 (para um tabuleiro 3x3)
 
 
