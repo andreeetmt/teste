@@ -1,4 +1,4 @@
-# Jogo da Idosa👵🎮
+<h1 align="center"> Jogo da Idosa👵🎮 </h1>
 
 ## Introdução
 Este é um código feito na linguagem c++ para representar um clássico jogo da velha, apelidado carinhosamente de Jogo da Idosa pelos criadores. O jogo pode
@@ -25,7 +25,6 @@ geração de números aleatórios e controle de tempo de execução.
 
 
 ##  Função LimparTela
-```cpp
 
 
 ##  void LimparTela() {
