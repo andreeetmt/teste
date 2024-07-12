@@ -24,15 +24,10 @@ geração de números aleatórios e controle de tempo de execução.
 
 
 
-##  Função LimparTela
+# :hammer: Inclusão de Bibliotecas
 
+- #include <iostream> - Biblioteca base do C++
+- #include <vector> - Biblioteca para facilitar a manipulação de vetores
+- #include <random> - Biblioteca para usar o random
+-  #include <unistd.h> - Biblioteca para usar a função sleep()
 
-##  void LimparTela() {
-#ifdef _WIN32
-    system("cls");  // Limpa a tela no Windows
-#else
-    system("clear");  // Limpa a tela em sistemas Unix/Linux
-#endif
-}
-
-Função para limpar a tela do console, adaptada para sistemas Windows e Unix/Linux.
